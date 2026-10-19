@@ -69,3 +69,29 @@ Sigue el patrón actual: subcarpeta con el código del idioma (`fr/`). En cada p
 2. Actualiza la fecha de "Última actualización" / "Last updated".
 3. Añade una entrada en [CHANGELOG.md](../CHANGELOG.md).
 4. Si el cambio afecta a cómo se tratan los datos, avísalo en las notas de versión de la extensión **antes** de que entre en vigor. La política se compromete a ello.
+
+## Plan Pro oculto (acceso anticipado)
+
+Mientras las extensiones se publican con el plan de pago oculto (`WXT_PAYWALL` sin activar en el monorepo `browser-extensions`), la web **no muestra precios ni botones de compra**: lo contrario sería publicidad engañosa en la ficha de la tienda y en la web.
+
+Todo lo relativo a Pro está envuelto en comentarios con marcadores, sin borrar nada:
+
+```html
+<!--PRO <section id="pricing">…</section> PRO-->
+<h3>Copias automáticas<!--PRO  (Pro) PRO--></h3>
+```
+
+Las páginas legales (privacidad, condiciones, gracias) no se tocan: describen qué pasa **si** se activa Pro y siguen siendo correctas.
+
+### Mostrar el plan Pro
+
+El mismo día que se publique la versión con el paywall activo (ver `browser-extensions/docs/monetizacion.md`):
+
+1. Rellena `TODO_TIENDA` y `TODO_<EXT>_CHECKOUT`, y revisa los precios (deben coincidir con Lemon Squeezy).
+2. Quita los marcadores **solo de esa extensión**:
+   ```bash
+   fd -e html . site/chatshelf -x sd '<!--PRO ' ''
+   fd -e html . site/chatshelf -x sd ' PRO-->' ''
+   ```
+3. Cuando las tres tengan Pro visible, haz lo mismo en `site/index.html` y `site/es/index.html` (tarjeta "Pagas una vez").
+4. `node scripts/check.mjs` y publica.

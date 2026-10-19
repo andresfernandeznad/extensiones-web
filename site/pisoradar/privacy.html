@@ -42,14 +42,14 @@
 
 <h2 id="navegador">2. Datos que PisoRadar guarda en tu navegador</h2>
 <p>Para funcionar, PisoRadar guarda en tu dispositivo:</p>
-<ul><li>El identificador, la dirección (URL) y los datos básicos (zona, superficie, precio) de los anuncios que abres en portales compatibles.</li><li>Los precios y fechas que la extensión ha ido viendo en cada anuncio.</li><li>Los anuncios que has ocultado.</li><li>Tus notas privadas (Pro).</li><li>Tus ajustes.</li><li>Si activas Pro: tu clave de licencia y el identificador de activación que devuelve Lemon Squeezy.</li></ul>
+<ul><li>El identificador, la dirección (URL) y los datos básicos (título, zona, superficie, número de habitaciones y precio) de los anuncios que abres en portales compatibles.</li><li>Los precios y fechas que la extensión ha ido viendo en cada anuncio.</li><li>Los anuncios que has ocultado.</li><li>Tus notas privadas (Pro).</li><li>Tus ajustes.</li><li>Si activas Pro: tu clave de licencia y el identificador de activación que devuelve Lemon Squeezy.</li></ul>
 <p>Se guardan con el almacenamiento local de extensiones de Chrome (<code>chrome.storage.local</code>), no se sincronizan con tu cuenta ni se envían a mí ni a terceros, y se borran al desinstalar la extensión. Como nunca salen de tu navegador, yo no puedo verlos, modificarlos ni borrarlos: los controlas tú.</p>
 
 <h2 id="licencia">3. Comprobación de la licencia (Lemon Squeezy)</h2>
 <p>Solo si activas PisoRadar Pro, la extensión se conecta a la API de licencias de <a href="https://www.lemonsqueezy.com/" rel="noopener">Lemon Squeezy</a> y le envía:</p>
 <ul>
   <li>tu clave de licencia;</li>
-  <li>un nombre de instancia que identifica esta instalación.<!-- TODO: confirmar cómo genera la extensión el nombre de instancia y que no incluye datos personales --></li>
+  <li>un nombre de instancia que identifica esta instalación: el nombre de la extensión y del navegador (por ejemplo, «PisoRadar Chrome»). Nunca incluye datos personales.</li>
 </ul>
 <p>Lemon Squeezy responde con un identificador de activación, que se guarda en tu navegador y se envía junto con la clave cuando la extensión comprueba que la licencia sigue siendo válida. Como ocurre con cualquier conexión a internet, Lemon Squeezy recibe también tu dirección IP y datos técnicos de la petición (por ejemplo, el tipo de navegador).</p>
 <p><strong>Finalidad:</strong> comprobar que la licencia es válida y respetar su límite de activaciones. <strong>Base jurídica:</strong> la ejecución del contrato de licencia (art. 6.1.b RGPD).</p>

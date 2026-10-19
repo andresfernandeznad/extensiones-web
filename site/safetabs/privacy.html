@@ -44,14 +44,14 @@
 
 <h2 id="local">2. Data SafeTabs stores in your browser</h2>
 <p>To work, SafeTabs stores on your device:</p>
-<ul><li>The names of the sessions you save.</li><li>The addresses (URLs) and titles of the tabs in those sessions, and how they are grouped into windows.</li><li>Your settings, such as how often snapshots are taken.</li><li>If you activate Pro: your license key and the activation ID returned by Lemon Squeezy.</li></ul>
+<ul><li>The names of the sessions you save.</li><li>The addresses (URLs) and titles of the tabs in those sessions, how they are grouped into windows, which tabs are pinned, and the name and colour of your tab groups.</li><li>Your settings, such as how often snapshots are taken.</li><li>If you activate Pro: your license key and the activation ID returned by Lemon Squeezy.</li></ul>
 <p>This data is kept in Chrome’s local extension storage (<code>chrome.storage.local</code>). It is not synced to your account, it is not sent to me or to anyone else, and it is deleted when you uninstall the extension. Because it never leaves your browser, I cannot see, change or delete it: you control it.</p>
 
 <h2 id="license">3. License check (Lemon Squeezy)</h2>
 <p>Only if you activate SafeTabs Pro, the extension connects to the <a href="https://www.lemonsqueezy.com/" rel="noopener">Lemon Squeezy</a> license API and sends:</p>
 <ul>
   <li>your license key;</li>
-  <li>an instance name that identifies this installation.<!-- TODO: confirm how the extension builds the instance name and that it contains no personal data --></li>
+  <li>an instance name that identifies this installation: the extension and browser name (for example “SafeTabs Chrome”). It never includes personal data.</li>
 </ul>
 <p>Lemon Squeezy replies with an activation ID, which is stored in your browser and sent along with the key when the extension checks that the license is still valid. As with any internet connection, Lemon Squeezy also receives your IP address and technical request data (such as the browser type).</p>
 <p><strong>Purpose:</strong> to check that the license is valid and to enforce its activation limit. <strong>Legal basis:</strong> performance of the license agreement (Art. 6(1)(b) GDPR).</p>
