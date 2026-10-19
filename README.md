@@ -30,9 +30,21 @@ SafeTabs y ChatShelf están en inglés (raíz de su carpeta) y en español (subc
 - **Accesible**: HTML semántico, navegación por teclado, contraste suficiente, modo oscuro y respeto a `prefers-reduced-motion`.
 - **Honesta**: la política de privacidad describe exactamente lo que hacen las extensiones. Consulta [docs/privacidad-y-legal.md](docs/privacidad-y-legal.md) antes de cambiar el comportamiento de una extensión.
 
+## Seguridad: nunca se commitean secretos
+
+El repositorio es público. **Nunca, bajo ningún concepto**, se commitean API keys, tokens, contraseñas, claves privadas (incluida la `.pem` de las extensiones), archivos `.env`, datos de clientes ni datos bancarios. La única excepción son los datos del titular que la ley obliga a publicar en las páginas legales de `site/`.
+
+Lo hacen cumplir `.gitignore`, un hook pre-commit, CI y la push protection de GitHub. Reglas completas en [CLAUDE.md](CLAUDE.md) y qué hacer si algo se filtra en [docs/seguridad.md](docs/seguridad.md).
+
 ## Inicio rápido
 
 Requisitos: Python 3 (para servir en local) y Node 18 o superior (para las comprobaciones).
+
+Nada más clonar, activa el hook que bloquea secretos:
+
+```bash
+git config core.hooksPath .githooks
+```
 
 ```bash
 python -m http.server 8080 -d site
@@ -88,6 +100,8 @@ site/                     Todo lo que se publica
   chatshelf/  chatshelf/es/
   pisoradar/              solo español
 scripts/check.mjs         Comprobaciones previas al despliegue
+scripts/scan-secrets.mjs  Escáner de secretos y datos sensibles
+.githooks/pre-commit      Ejecuta el escáner antes de cada commit
 .github/workflows/        Despliegue a GitHub Pages
 docs/                     Documentación
 ```
@@ -98,6 +112,7 @@ docs/                     Documentación
 - [Editar contenido](docs/contenido.md): cambiar textos y precios, añadir capturas o una extensión nueva.
 - [Privacidad y legal](docs/privacidad-y-legal.md): qué promete la web y qué pueden y no pueden hacer las extensiones.
 - [Accesibilidad y usabilidad](docs/accesibilidad-y-usabilidad.md): qué se garantiza y cómo probarlo.
+- [Seguridad](docs/seguridad.md): secretos, datos sensibles y qué hacer ante una filtración.
 - [Despliegue](docs/despliegue.md): GitHub Pages, comprobaciones, dominio propio y cómo deshacer una publicación.
 - [Changelog](CHANGELOG.md)
 
@@ -109,4 +124,3 @@ Los textos legales son una base cuidada, no asesoramiento jurídico. Que los rev
 
 © 2026 TODO_NOMBRE. Todos los derechos reservados.
 
-El repositorio es privado, pero la web publicada es pública: cualquier dato que pongas en `site/` (nombre, NIF, dirección) será visible en internet. GitHub Pages en repositorios privados requiere un plan de pago (GitHub Pro o superior).

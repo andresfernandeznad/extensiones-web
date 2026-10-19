@@ -1,3 +1,22 @@
+# Secrets: NEVER commit these (see CLAUDE.md and docs/seguridad.md)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crx
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+credentials*
+secrets/
+secrets.*
+
 # Local tooling
 .claude/
 .vscode/

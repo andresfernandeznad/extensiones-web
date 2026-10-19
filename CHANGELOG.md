@@ -2,6 +2,14 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/). Las fechas de los textos legales se actualizan en las propias páginas.
 
+## [Sin publicar]
+
+### Añadido
+
+- Reglas para no commitear secretos ni datos sensibles (`CLAUDE.md`, `docs/seguridad.md`).
+- `scripts/scan-secrets.mjs`, hook pre-commit y paso de escaneo en CI.
+- `.gitignore` ampliado con `.env`, claves y certificados.
+
 ## [1.0.0] - 2026-10-19
 
 ### Añadido

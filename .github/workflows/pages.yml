@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - name: Scan for secrets and sensitive data
+        run: node scripts/scan-secrets.mjs
       - name: Run pre-deploy checks
         run: node scripts/check.mjs
 
