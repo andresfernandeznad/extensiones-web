@@ -4,6 +4,13 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/). L
 
 ## [Sin publicar]
 
+### Cambiado
+
+- Fase gratuita: la web se firma con la marca Localware y su correo de contacto, sin nombre, NIF ni dirección.
+- Sin precios, botones de compra ni secciones de licencia, compra y reembolso; las páginas de gracias explican que Pro todavía no existe.
+- La política de privacidad ya no menciona Lemon Squeezy (las extensiones no se conectan a ningún servidor) y añade Gmail como servicio de correo.
+- Nueva URL: `localware.github.io/extensiones-web/`.
+
 ### Añadido
 
 - Reglas para no commitear secretos ni datos sensibles (`CLAUDE.md`, `docs/seguridad.md`).

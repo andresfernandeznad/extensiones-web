@@ -2,7 +2,7 @@
 
 Web pública de mis extensiones de navegador: **SafeTabs**, **ChatShelf** y **PisoRadar**.
 
-Publicada en **https://andresfernandeznad.github.io/extensiones-web/**
+Publicada en **https://localware.github.io/extensiones-web/**
 
 ## Para qué sirve
 
@@ -60,18 +60,14 @@ Comprueba enlaces, accesibilidad básica y datos pendientes. Es la misma comprob
 
 ## Antes de publicar: checklist
 
-El despliegue **se bloquea automáticamente** mientras falten los datos legales. Sin ellos, la política de privacidad y las condiciones no son válidas.
+La web está en **fase gratuita**: las extensiones no cobran nada y no se conectan a ningún servidor, así que las páginas legales van firmadas con la marca **Localware** y su correo de contacto, sin nombre, NIF ni dirección. La LSSI solo obliga a publicar esos datos cuando la web es una actividad económica. Ver [docs/privacidad-y-legal.md](docs/privacidad-y-legal.md#fase-gratuita-y-fase-de-pago).
 
-- [ ] `TODO_NOMBRE`: tu nombre completo
-- [ ] `TODO_NIF`: tu NIF
-- [ ] `TODO_DIRECCION`: tu dirección postal (el texto ya añade "España")
-- [ ] `TODO_EMAIL`: correo de contacto
+El despliegue **se bloquea automáticamente** si queda algún dato legal sin rellenar (`TODO_NOMBRE`, `TODO_NIF`, `TODO_DIRECCION`, `TODO_EMAIL`). En la fase gratuita no hay ninguno; vuelven al activar el cobro.
 
 Estos datos no bloquean el despliegue, pero hay que completarlos en cuanto existan:
 
 - [ ] `TODO_SAFETABS_ID`, `TODO_CHATSHELF_ID`, `TODO_PISORADAR_ID`: ID de cada extensión en Chrome Web Store
-- [ ] `TODO_TIENDA` y `TODO_*_CHECKOUT`: tienda y enlaces de compra de Lemon Squeezy
-- [ ] Comentarios `<!-- TODO -->`: capturas reales, pasos de activación según la interfaz real, cómo se genera el nombre de instancia y el mecanismo de transferencia internacional de Lemon Squeezy
+- [ ] Comentarios `<!-- TODO -->`: capturas reales
 
 ¿Por qué esa separación? Chrome Web Store pide la URL de la política de privacidad **antes** de publicar la extensión. Si los ID de la tienda bloquearan el despliegue, nunca podrías publicar ninguna de las dos cosas.
 
@@ -122,5 +118,5 @@ Los textos legales son una base cuidada, no asesoramiento jurídico. Que los rev
 
 ## Licencia
 
-© 2026 TODO_NOMBRE. Todos los derechos reservados.
+© 2026 Localware. Todos los derechos reservados.
 

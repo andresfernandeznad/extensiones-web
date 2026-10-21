@@ -30,6 +30,24 @@ Antes de publicar una versión que añada una conexión, un dato nuevo o un terc
 3. Avísalo en las notas de versión antes de que entre en vigor.
 4. Si es un tercero nuevo, revisa si hace falta un contrato de encargado del tratamiento (art. 28 RGPD).
 
+## Fase gratuita y fase de pago
+
+La web tiene dos estados, igual que las extensiones (`WXT_PAYWALL`).
+
+**Fase gratuita (ahora).** Las extensiones no tienen Pro, no hacen ninguna petición de red y no hay nada a la venta. Por eso:
+
+- Las páginas legales van firmadas con la marca **Localware** y su correo, sin nombre, NIF ni dirección. Sin actividad económica no aplica el art. 10 de la LSSI, y como las extensiones no envían ningún dato, el único tratamiento es el de los correos que recibas.
+- Las páginas de producto no tienen precios ni botón de compra, y las secciones de licencia, compra y reembolso no existen.
+- Las páginas `thanks.html` siguen existiendo (su ruta no cambia), pero solo dicen que Pro todavía no existe.
+- En Chrome Web Store la cuenta se declara *non-trader*: sin cobro no hay actividad comercial, así que no se publican dirección ni teléfono.
+
+**Fase de pago (al activar `WXT_PAYWALL=on`).** Antes de publicar la primera versión con cobro:
+
+1. Revierte el commit que pasó la web a la fase gratuita (`git log --grep "fase gratuita"`): vuelven los precios, las secciones de licencia, compra y reembolso, y los marcadores `TODO_NOMBRE`, `TODO_NIF`, `TODO_DIRECCION`, que bloquean el despliegue hasta rellenarlos.
+2. Mantén la URL nueva y el correo de Localware al resolver los conflictos.
+3. Cambia la declaración de Chrome Web Store a *trader*.
+4. Consulta a un gestor el alta en Hacienda y, si procede, en la Seguridad Social.
+
 ## Qué cubre cada sección de la política
 
 1. **Responsable**: identidad completa del autónomo (art. 13.1.a RGPD).

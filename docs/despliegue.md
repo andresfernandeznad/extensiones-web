@@ -12,7 +12,7 @@ pull request ──► job "Check site" (no publica)
 - Origen de Pages: **GitHub Actions** (Settings → Pages → Build and deployment → Source).
 - Solo se publica la carpeta `site/`.
 - Si la comprobación falla, no se publica nada y la versión anterior sigue en línea.
-- URL: https://andresfernandeznad.github.io/extensiones-web/
+- URL: https://localware.github.io/extensiones-web/
 
 ## Primer despliegue
 
@@ -51,9 +51,9 @@ También puedes relanzar un despliegue manualmente: Actions → Deploy to GitHub
 
 ## Dominio propio (opcional)
 
-1. En tu proveedor DNS, crea un registro `CNAME` de `www.tudominio.es` a `andresfernandeznad.github.io`.
+1. En tu proveedor DNS, crea un registro `CNAME` de `www.tudominio.es` a `localware.github.io`.
 2. GitHub → Settings → Pages → Custom domain: `www.tudominio.es`, y activa "Enforce HTTPS" cuando esté disponible.
-3. En todas las páginas, reemplaza `https://andresfernandeznad.github.io/extensiones-web` por `https://www.tudominio.es` (canonical y hreflang).
+3. En todas las páginas, reemplaza `https://localware.github.io/extensiones-web` por `https://www.tudominio.es` (canonical y hreflang).
 4. En `site/404.html`, cambia `/extensiones-web/` por `/`.
 5. Actualiza las URLs en Chrome Web Store (política de privacidad, web) y en Lemon Squeezy (redirección tras la compra).
 

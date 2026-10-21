@@ -32,7 +32,7 @@ node scripts/check.mjs
 
 En Lemon Squeezy, configura en cada producto:
 
-- **Redirect after purchase** (Confirmation modal → Button link): `https://andresfernandeznad.github.io/extensiones-web/<extensión>/thanks.html` (o `/es/thanks.html`).
+- **Redirect after purchase** (Confirmation modal → Button link): `https://localware.github.io/extensiones-web/<extensión>/thanks.html` (o `/es/thanks.html`).
 - **License keys** activado, con el límite de activaciones que quieras. Las condiciones remiten a "el límite indicado en la compra", así que tiene que mostrarse en el checkout o en la descripción del producto.
 - **Precios con impuestos incluidos**. La web dice "impuestos incluidos" y, en España, los precios a consumidores deben mostrarse con IVA.
 

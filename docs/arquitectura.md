@@ -18,7 +18,7 @@ Una web pequeña, rápida y fácil de mantener que dé soporte comercial y legal
 
 ### Rutas relativas
 
-- Todos los enlaces internos son relativos (`../assets/style.css`, `privacy.html`). La web funciona igual en `andresfernandeznad.github.io/extensiones-web/`, en local o con un dominio propio, sin tocar nada.
+- Todos los enlaces internos son relativos (`../assets/style.css`, `privacy.html`). La web funciona igual en `localware.github.io/extensiones-web/`, en local o con un dominio propio, sin tocar nada.
 - **Excepción**: `404.html`. GitHub Pages la sirve desde cualquier URL que no exista, así que sus enlaces son absolutos (`/extensiones-web/`). Si cambias a dominio propio, actualízalos (ver [despliegue.md](despliegue.md)).
 - Las etiquetas `<link rel="canonical">` y `hreflang` usan URLs absolutas porque así lo exigen los buscadores.
 
